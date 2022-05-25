@@ -1,15 +1,18 @@
 {% if cursos %}
 
 <ul>
-
 {% for c in cursos %}
 
-<li><a href="/cursos/{{c.id}}"> {{c.titulo}} </a></li>
+<li>
+    <a href="/cursos/{{c.id}}"> {{c.titulo}} </a>
+    <a href="/cursos/excluir/{{ c.id }}">(X)</a>
+    <a href="/cursos/editar/{{ c.id }}">(editar)</a>
+</li>
 
 {% endfor %}
-
 </ul>
 
 {% else %}
 <h1>Nenhum curso cadastrado.</h1>
 {% endif %}
+<a href="/cursos/criar">Adicionar Curso</a>

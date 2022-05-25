@@ -5,3 +5,5 @@ class Cursos(models.Model):
     descricao = models.TextField()
     tempo_duracao = models.IntegerField()
 
+def __str__(self):
+        return self.nome

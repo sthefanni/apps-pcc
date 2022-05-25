@@ -1,1 +1,13 @@
-Aqui detalha
+
+{% if cursos %}
+<ul>
+    
+    <h1>{{cursos.titulo}}</h1>
+    <h2>{{cursos.descricao}}</h2>
+    <p>{{cursos.tempo_duracao}}</p>
+
+</ul>
+
+{% else %}
+<h1>Nenhum curso encontrado.</h1>
+{% endif %}
