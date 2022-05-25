@@ -4,9 +4,9 @@
 {% for c in cursos %}
 
 <li>
-    <a href="/cursos/{{c.id}}"> {{c.titulo}} </a>
+    <a href="/cursos/{{c.id}}"> {{c.titulo}} </a></br>
     <a href="/cursos/excluir/{{ c.id }}">(X)</a>
-    <a href="/cursos/editar/{{ c.id }}">(editar)</a>
+    <a href="/cursos/editar/{{ c.id }}">(Editar)</a>
 </li>
 
 {% endfor %}
