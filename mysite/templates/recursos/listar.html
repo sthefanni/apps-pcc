@@ -1,0 +1,18 @@
+{% if recursos %}
+
+<ul>
+{% for c in recursos %}
+
+<li>
+    <a href="/recursos/{{c.id}}"> {{c.titulo}} </a></br>
+    <a href="/recursos/excluir/{{ c.id }}">(X)</a>
+    <a href="/recursos/editar/{{ c.id }}">(Editar)</a>
+</li>
+
+{% endfor %}
+</ul>
+
+{% else %}
+<h1>Nenhum recurso cadastrado.</h1>
+{% endif %}
+<a href="/recursos/criar">Adicionar Recurso</a>

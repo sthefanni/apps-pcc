@@ -1,0 +1,18 @@
+{% if conteudo %}
+
+<ul>
+{% for c in conteudo %}
+
+<li>
+    <a href="/conteudo/{{c.id}}"> {{c.titulo}} </a></br>
+    <a href="/conteudo/excluir/{{ c.id }}">(X)</a>
+    <a href="/conteudo/editar/{{ c.id }}">(Editar)</a>
+</li>
+
+{% endfor %}
+</ul>
+
+{% else %}
+<h1>Nenhum conteudo cadastrado.</h1>
+{% endif %}
+<a href="/conteudo/criar">Adicionar Conteudo</a>
